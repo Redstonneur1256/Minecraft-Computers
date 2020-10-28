@@ -10,7 +10,7 @@ public class MinecraftComputerClient {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }catch(Exception exception) {
-            exception.printStackTrace();
+            System.out.println("Failed to set System look & feel: " + exception);
         }
 
         try {
