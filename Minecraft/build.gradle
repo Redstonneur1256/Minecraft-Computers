@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+group 'fr.redstonneur1256'
+version '1.0'
+
+shadowJar.archiveFileName = "MinecraftComputers.jar"
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.12.2-R0.1-SNAPSHOT'
+    compileOnly 'fr.redstonneur1256:MinecraftMaps:1.1'
+}

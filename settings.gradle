@@ -1,0 +1,5 @@
+rootProject.name = 'Minecraft Computers'
+include 'Host'
+include 'Minecraft'
+include 'Common'
+

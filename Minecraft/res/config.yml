@@ -1,0 +1,17 @@
+host:
+  port: 8712
+  type: JPG # JPG: Faster, some color loss, PNG: Slower but all quality
+
+map:
+  world: 'world'
+  width: 5
+  height: 3
+  id: 0
+
+render:
+  auto: true
+  # All of this are ignored if its auto type
+  x: 0
+  y: 0
+  width: 640 # Width display, for this case the number of maps * 128
+  height: 384

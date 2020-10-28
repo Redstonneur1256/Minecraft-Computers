@@ -1,0 +1,8 @@
+plugins {
+    id 'java'
+}
+
+group 'fr.redstonneur1256'
+version '1.0'
+
+jar.manifest.attributes.put('Main-Class', 'fr.redstonneur1256.MinecraftComputerClient')

@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+group 'fr.redstonneur1256'
+version '1.0'
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    sourceSets.main.java.srcDirs = ["src/"]
+    sourceSets.main.resources.srcDirs = ["res/"]
+    sourceSets.test.java.srcDirs = []
+    sourceSets.test.resources.srcDirs = []
+    compileJava.options.encoding = "UTF-8"
+    compileJava.sourceCompatibility = 1.8
+    compileJava.targetCompatibility = 1.8
+
+    shadowJar.archiveFileName = project.name + ".jar"
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://www.jitpack.io' }
+    }
+
+    dependencies {
+        if(project.name != "Common") {
+            compile project(":Common")
+        }
+    }
+
+}
+
+sourceSets.main.java.srcDirs = []
+sourceSets.main.resources.srcDirs = []
